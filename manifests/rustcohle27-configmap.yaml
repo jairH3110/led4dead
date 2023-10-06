@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rustcohle27-config
+  labels:
+    app: postgres
+data:
+  PROD_SECRET_KEY: adsoft
+  PROD_DATABASE: xjogdikk
+  PROD_USER: xjogdikk
+  PROD_PASSWORD: 3vhA2AmR-usg5isXAklymXx6btvkxWZT
+  PROD_HOST: bubble.db.elephantsql.com
+  PROD_PORT: "5432"

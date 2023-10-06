@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: graphql-adsoftsito
+  name: graphql-rustcohle27
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: graphql-adsoftsito
+      app: graphql-rustcohle27
   template:
     metadata:
       labels:
-        app: graphql-adsoftsito
+        app: graphql-rustcohle27
     spec:
       containers:
-      - image: okteto.dev/graphql-adsoftsito:latest
-        name: adsoftsito
+      - image: okteto.dev/graphql-rustcohle27:latest
+        name: rustcohle27
         envFrom:
         - configMapRef:
-            name: adsoftsito-config
+            name: rustcohle27-config
         livenessProbe:
           httpGet:
             path: /ht/
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: graphql-adsoftsito
+  name: graphql-rustcohle27
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "graphql-adsoftsito"
+  - name: "graphql-rustcohle27"
     port: 8080
   selector:
-    app: graphql-adsoftsito
+    app: graphql-rustcohle27
