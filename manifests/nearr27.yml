@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rustcohle27
+  name: nearr27
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rustcohle27
+      app: nearr27
   template:
     metadata:
       labels:
-        app: rustcohle27
+        app: nearr27
     spec:
       containers:
-      - image: okteto.dev/rustcohle27:latest
-        name: rustcohle27
+      - image: okteto.dev/nearr27:latest
+        name: nearr27
         envFrom:
         - configMapRef:
-            name: rustcohle27-config
+            name: nearr27-config
         livenessProbe:
           httpGet:
             path: /ht/
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: rustcohle27
+  name: nearr27
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "rustcohle27"
+  - name: "nearr27"
     port: 8080
   selector:
-    app: rustcohle27
+    app: nearr27

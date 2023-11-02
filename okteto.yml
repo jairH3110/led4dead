@@ -1,6 +1,6 @@
 build:
-  rustcohle27:
-    image: okteto.dev/rustcohle27:latest
+  nearr27:
+    image: okteto.dev/nearr27:latest
 
 deploy:
   - okteto build # build the image with the latest code

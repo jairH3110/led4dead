@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: rustcohle27-config
+  name: nearr27-config
   labels:
     app: postgres
 data:
