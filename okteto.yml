@@ -1,6 +1,6 @@
 build:
-  nearr27:
-    image: okteto.dev/nearr27:latest
+  jairdelfin:
+    image: okteto.dev/jairdelfin:latest
 
 deploy:
   - okteto build # build the image with the latest code

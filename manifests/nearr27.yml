@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nearr27
+  name: jairdelfin
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nearr27
+      app: jairdelfin
   template:
     metadata:
       labels:
-        app: nearr27
+        app: jairdelfin
     spec:
       containers:
-      - image: okteto.dev/nearr27:latest
-        name: nearr27
+      - image: okteto.dev/jairdelfin:latest
+        name: jairdelfin
         envFrom:
         - configMapRef:
-            name: nearr27-config
+            name: jairdelfin-config
         livenessProbe:
           httpGet:
             path: /ht/
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nearr27
+  name: jairdelfin
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "nearr27"
+  - name: "jairdelfin"
     port: 8080
   selector:
-    app: nearr27
+    app: jairdelfin
