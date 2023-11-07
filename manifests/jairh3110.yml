@@ -22,8 +22,17 @@ spec:
           httpGet:
             path: /ht/
             port: 7080
+          timeoutSeconds: 5
           initialDelaySeconds: 30
           periodSeconds: 27
+      
+          readinessProbe:
+              httpGet:
+                path: /ready
+                port: 7080
+                timeoutSeconds: 5
+                initialDelaySeconds: 60
+                periodSeconds: 10  
 ---
 
 apiVersion: v1
