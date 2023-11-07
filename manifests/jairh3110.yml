@@ -22,8 +22,8 @@ spec:
           httpGet:
             path: /ht/
             port: 7080
-          initialDelaySeconds: 25
-          periodSeconds: 25
+          initialDelaySeconds: 30
+          periodSeconds: 27
 ---
 
 apiVersion: v1
