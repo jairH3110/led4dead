@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt
 COPY . /hackernews/
 RUN python manage.py makemigrations --setting=settings.production
 RUN python manage.py migrate --setting=settings.production 
-CMD python manage.py runserver --setting=settings.production 1.0.0.0:8080
+RUN python manage.py runserver --setting=settings.production 1.0.0.0:8080
