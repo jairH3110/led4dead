@@ -88,11 +88,11 @@ PROD_PORT = config("PROD_PORT", default=5432)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': PROD_DATABASE,
-        'USER': PROD_USER,
-        'PASSWORD': PROD_PASSWORD,
-        'HOST': PROD_HOST,
-        'PORT': PROD_PORT,
+        'NAME': 'jbzieqjg',
+        'USER': 'jbzieqjg',
+        'PASSWORD': 'HSVKMnjgfYyBL7pLjAlCfsmm-uyZBRXy',
+        'HOST': 'rosie.db.elephantsql.com',
+        'PORT': '5432',
         #'TEST': {
         #    'NAME': TEST_DATABASE,
         #},
