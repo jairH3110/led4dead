@@ -1,5 +1,5 @@
 #
-FROM python:3
+FROM python:3.8
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /hackernews
@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt
 COPY . /hackernews/
 RUN python manage.py makemigrations --setting=settings.production
 RUN python manage.py migrate --setting=settings.production 
-RUN python manage.py runserver --setting=settings.production 1.1.1.1:8080
+CMD python manage.py runserver --setting=settings.production 1.1.1.1:8080
