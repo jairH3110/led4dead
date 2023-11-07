@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jairh3110
+  name: 2-jairh3110
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jairh3110
+      app: 2-jairh3110
   template:
     metadata:
       labels:
-        app: jairh3110
+        app: 2-jairh3110
     spec:
       containers:
-      - image: okteto.dev/jairh3110:latest
+      - image: okteto.dev/2-jairh3110:latest
         name: jairh3110
         envFrom:
         - configMapRef:
@@ -29,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: jairh3110
+  name: 2-jairh3110
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
@@ -38,4 +38,4 @@ spec:
   - name: "jairh3110"
     port: 7080
   selector:
-    app: jairh3110
+    app: j2-airh3110
