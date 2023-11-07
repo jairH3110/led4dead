@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: jairdelfin-config
+  name: jairh3110-config
   labels:
     app: postgres
 data:

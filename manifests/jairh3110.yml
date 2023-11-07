@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jairdelfin
+  name: jairh3110
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jairdelfin
+      app: jairh3110
   template:
     metadata:
       labels:
-        app: jairdelfin
+        app: jairh3110
     spec:
       containers:
-      - image: okteto.dev/jairdelfin:latest
-        name: jairdelfin
+      - image: okteto.dev/jairh3110:latest
+        name: jairh3110
         envFrom:
         - configMapRef:
-            name: jairdelfin-config
+            name: jairh3110-config
         livenessProbe:
           httpGet:
             path: /ht/
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: jairdelfin
+  name: jairh3110
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "jairdelfin"
+  - name: "jairh3110"
     port: 8080
   selector:
-    app: jairdelfin
+    app: jairh3110
