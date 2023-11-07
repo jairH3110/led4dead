@@ -57,7 +57,7 @@ jobs:
     - name: Deploy
       uses: okteto/pipeline@2.7.0
       with:
-         name: api-led4dead
+         name: api-led4dead2
          timeout: 10m
          #variables: "DEV_USER=${{ secrets.DEV_USER }}"
 
