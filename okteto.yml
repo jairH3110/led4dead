@@ -1,6 +1,6 @@
 build:
   jairdelfin:
-    image: okteto.dev/jairdelfin:latest
+    image: okteto.dev/jairh3110:latest
 
 deploy:
   - okteto build # build the image with the latest code
